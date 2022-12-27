@@ -1,39 +1,17 @@
 <html>
   <head>
     <title>Project Sunshine</title>
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        background-color: white;
-        background-image: url("./src/images/background.jpg");
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-      }
-      h1 {
-        font-family: Arial;
-      }
-    </style>
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
     <div>
       <h1 id="text"></h1>
+      <div class="buttons">
+        <a href="#">Button 1</a>
+        <a href="#">Button 2</a>
+        <a href="#">Button 3</a>
+      </div>
     </div>
+    <script src="./src/js/script.js"></script>
   </body>
-  <script>
-    const text = document.getElementById("text");
-    let i = 0;
-    const message = "Project Sunshine";
-    const typing = () => {
-      if (i < message.length) {
-        text.innerHTML += message.charAt(i);
-        i++;
-        setTimeout(typing, 50);
-      }
-    };
-    typing();
-  </script>
 </html>
