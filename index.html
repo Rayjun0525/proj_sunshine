@@ -1,11 +1,15 @@
 <html>
   <head>
+    <title>Project Sunshine</title>
     <style>
       body {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+      }
+      h1 {
+        font-family: Arial;
       }
     </style>
   </head>
@@ -20,7 +24,7 @@
     const message = "Project Sunshine";
     const typing = () => {
       if (i < message.length) {
-        text.innerHTML += message.charAt(i);
+        text.innerHTML = message.substr(0, i + 1);
         i++;
         setTimeout(typing, 50);
       }
