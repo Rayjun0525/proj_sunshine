@@ -5,7 +5,7 @@ const typing = () => {
   if (i < message.length) {
     text.innerHTML += message.charAt(i);
     i++;
-    setTimeout(typing, 50);
+    setTimeout(typing, 40);
   }
 };
 typing();
