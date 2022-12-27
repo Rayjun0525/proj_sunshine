@@ -7,9 +7,33 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        background: url('./background.jpg') no-repeat center center fixed;
+        background-size: cover;
       }
       h1 {
         font-family: Arial;
+      }
+      #text {
+        position: relative;
+      }
+      #text:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 75%,rgba(255,255,255,1));
+        background-size: 20px 20px;
+        animation: wind 2s linear infinite;
+      }
+      @keyframes wind {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -400px 0;
+        }
       }
     </style>
   </head>
