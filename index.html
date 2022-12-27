@@ -12,7 +12,20 @@
   </head>
   <body>
     <div>
-      <h1>Project Sunshine</h1>
+      <h1 id="text">Project Sunshine</h1>
     </div>
   </body>
+  <script>
+    const text = document.getElementById("text");
+    let i = 0;
+    const message = "Project Sunshine";
+    const typing = () => {
+      if (i < message.length) {
+        text.innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typing, 50);
+      }
+    };
+    typing();
+  </script>
 </html>
